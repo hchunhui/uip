@@ -35,7 +35,7 @@ all: uip
 CC     = gcc
 AR     = ar
 APPS   = webserver
-CFLAGS = -Wall -g -I../uip -I. -fpack-struct -Os
+CFLAGS = -fno-strict-aliasing -g -I../uip -I. -fpack-struct -Os
 -include ../uip/Makefile.include
 
 uip: $(addprefix $(OBJECTDIR)/, main.o tapdev.o clock-arch.o) apps.a uip.a

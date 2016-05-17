@@ -35,7 +35,7 @@
  *
  */
 
-
+#include <stdio.h>
 #include "uip.h"
 #include "uip_arp.h"
 #include "tapdev.h"
@@ -162,8 +162,6 @@ uip_log(char *m)
 void
 resolv_found(char *name, u16_t *ipaddr)
 {
-  u16_t *ipaddr2;
-  
   if(ipaddr == NULL) {
     printf("Host '%s' not found.\n", name);
   } else {

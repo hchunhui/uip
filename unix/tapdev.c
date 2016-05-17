@@ -100,7 +100,7 @@ unsigned int
 tapdev_read(void)
 {
   fd_set fdset;
-  struct timeval tv, now;
+  struct timeval tv;
   int ret;
   
   tv.tv_sec = 0;
